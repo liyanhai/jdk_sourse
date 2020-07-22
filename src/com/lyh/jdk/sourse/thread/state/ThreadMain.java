@@ -59,6 +59,8 @@ public class ThreadMain {
             System.out.println("线程&&&:" + threadB.getName() + " " + threadB.getState());
             Thread.sleep(300);
         }
+
+        threadA.join();
     }
 
 }

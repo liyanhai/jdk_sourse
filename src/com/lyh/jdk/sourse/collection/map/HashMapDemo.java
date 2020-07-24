@@ -13,6 +13,8 @@ public class HashMapDemo {
         //1、创建HashMap时，默认容量16，默认的加载因子0.75,###只初始化了 loadFactor，初始容量
         HashMap<Integer,Integer> map = new HashMap<>();
 
+        HashMap<Integer,Integer> map1 = new HashMap<>(10);
+
         /**
          * 1、对key进行hash(高低16位做一个异或)，得到hash值
          * 2、若table位null,则进行resize，初始容量 16，初始阈值12，resize方法返回一个新数组

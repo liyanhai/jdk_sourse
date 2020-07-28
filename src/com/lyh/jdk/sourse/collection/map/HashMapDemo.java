@@ -1,6 +1,6 @@
 package com.lyh.jdk.sourse.collection.map;
 
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * @author liyanhai
@@ -41,11 +41,22 @@ public class HashMapDemo {
          *                  else
          *                      链表转树...todo 看源码
          */
-        Integer put = map.put(1, 1);
-
-        Integer value = map.get(1);
-
-        System.out.println(put);
+//        map.put(1, 1);
+//
+//        Set<Integer> set = map.keySet();
+//        System.out.println(set);
+        Map<String,String> keyMap = new HashMap<>();
+        keyMap.put("Aa","Aa");
+        keyMap.put("BB","BB");
+        keyMap.put("三个","三个");
+        keyMap.put("上下","上下");
+        Set<String> keySet = keyMap.keySet();
+        Set<Map.Entry<String, String>> entries = keyMap.entrySet();
+        Iterator<String> iterator = keySet.iterator();
+        Collection<String> values = keyMap.values();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 
 

@@ -57,10 +57,6 @@ public class HashMapDemo {
         while (iterator.hasNext()){
             System.out.println(iterator.next());
         }
-
-        Integer integer = Integer.valueOf(12);
-        Integer integer1 = Integer.valueOf(12);
-        System.out.println(integer == integer1);
     }
 
 

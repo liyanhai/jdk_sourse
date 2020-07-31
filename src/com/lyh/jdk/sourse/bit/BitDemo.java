@@ -7,12 +7,14 @@ package com.lyh.jdk.sourse.bit;
 public class BitDemo {
 
     public static void main(String[] args) {
-        yuOperate();
-        huoOperate();
-        feiOperate();
-        yhOperate();
-        leftMove();
-        rightMove();
+//        yuOperate();
+//        huoOperate();
+//        feiOperate();
+//        yhOperate();
+//        leftMove();
+//        rightMove();
+
+        System.out.println(16 >>> 2);
     }
 
     /**
@@ -68,8 +70,8 @@ public class BitDemo {
 
     public static void rightMove(){
         //11 00011
-        int a = 3;
-        System.out.println(a >> 3);
+        int a = 10;
+        System.out.println(a >> 1);
         System.out.println(a >>> 3);
     }
 }

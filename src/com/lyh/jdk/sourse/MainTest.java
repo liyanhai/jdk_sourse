@@ -13,22 +13,6 @@ public class MainTest {
 
     public static void main(String[] args) {
 
-        List<String> list = new ArrayList<String>();
-        list.add("zhangsan");
-        list.add("lisi");
-        list.add("wangwu");
-
-        Iterator<String> iterator = list.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-            if(iterator.next().equals("lisi")){
-                list.remove(iterator.next());
-            }
-        }
-
-
-        System.out.println(list);
-
     }
 
     public static int hash(String key){

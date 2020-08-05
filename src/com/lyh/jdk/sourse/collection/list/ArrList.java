@@ -2,6 +2,7 @@ package com.lyh.jdk.sourse.collection.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * @author liyanhai
@@ -26,6 +27,15 @@ public class ArrList {
 
         ArrayList<String> list = new ArrayList<>();
         list.add("12345");
+
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        hashSet.add(1);
+        hashSet.add(2);
+
+        for(Integer i : hashSet){
+            System.out.println(i);
+        }
 
 
     }

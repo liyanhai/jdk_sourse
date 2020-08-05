@@ -24,6 +24,10 @@ public class ArrList {
         byte[] bytes = str.getBytes();
         System.out.println(Arrays.toString(bytes));
 
+        ArrayList<String> list = new ArrayList<>();
+        list.add("12345");
+
+
     }
 
 }

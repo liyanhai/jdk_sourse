@@ -18,18 +18,23 @@ class RunIt implements Runnable {
     }
 
     private void runJob() throws InterruptedException {
-		lock.lockInterruptibly();
-        try {
-			System.out.println(Thread.currentThread().getName() + " 到此一游....");
-            System.out.println(Thread.currentThread().getName() + " running");
-            TimeUnit.SECONDS.sleep(3);
-            System.out.println(Thread.currentThread().getName() + " finished");
+		//lock.lockInterruptibly();
+        if (lock.tryLock(3, TimeUnit.SECONDS)) {
+            try {
+                System.out.println(Thread.currentThread().getName() + " 到此一游....");
+                System.out.println(Thread.currentThread().getName() + " running");
+                TimeUnit.SECONDS.sleep(4);
+                System.out.println(Thread.currentThread().getName() + " finished");
 
-        } catch (InterruptedException e) {
-            System.out.println(Thread.currentThread().getName() + " interrupted");
-        } finally {
-            lock.unlock();
+            } catch (InterruptedException e) {
+                System.out.println(Thread.currentThread().getName() + " interrupted");
+            } finally {
+                lock.unlock();
+            }
+        }else{
+            System.out.println("没有获取到锁");
         }
+
     }
 }
  
